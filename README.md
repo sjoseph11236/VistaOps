@@ -1,8 +1,20 @@
 # VistaOps
 
+![Vista Ops Logo](./web/public/favicon.png)
+
+[![AWS](https://img.shields.io/badge/Built%20on-AWS-orange?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![S3](https://img.shields.io/badge/S3-Static%20Hosting-red?logo=amazons3&logoColor=white)](https://aws.amazon.com/s3/)
+[![CloudFront](https://img.shields.io/badge/CDN-CloudFront-blue?logo=amazonaws&logoColor=white)](https://aws.amazon.com/cloudfront/)
+
+🔗 **Live demo:** [vistaops.org](https://vistaops.org)
+
+---
+
 ## 📘 Laundry Notifications MVP
 
-**VistaOps** is a lightweight, AWS-native tool to help **Mental Health Counselors (MHCs)** and nursing staff track patient laundry across shift changes. The MVP provides a dead-simple flow to **log items, update statuses, and send shift-ready reminders** — reducing lost/late laundry and improving handoff communication.
+**VistaOps** is a lightweight, AWS-native tool to help **Mental Health Counselors (MHCs)** and nursing staff track patient laundry across shift changes.
+
+The MVP provides a dead-simple flow to **log items, update statuses, and send shift-ready reminders** — reducing lost/late laundry and improving handoff communication.
 
 ---
 
@@ -10,7 +22,7 @@
 
 - **Create laundry item** (first name + unit)
 - **Update status**: `washing → drying → ready → returned`
-- **Mobile-first view** with big Ready / Returned buttons
+- **Mobile-first view** with large Ready / Returned buttons
 - **24-hour auto-purge** of items (privacy + simplicity)
 - **Shared passcode auth** (MVP only)
 - **Optional SMS alerts** when laundry is ready (Twilio, feature-flagged)
@@ -22,14 +34,14 @@
 
 **Frontend**
 
-- Static page in `/web/` (HTML + Tailwind CDN + vanilla JS)
+- Static page in `/web/` (HTML + CSS + vanilla JS)
 - QR code generation via open-source library (`QRCode.js`)
 - Hosted on **AWS S3 + CloudFront** (with optional Route 53 domain)
 
 **Backend (next phase)**
 
 - Runtime: **Node.js + TypeScript**
-- Framework: **Fastify (or Express)** with **Zod** validation
+- Framework: **Fastify** (or Express) with **Zod** validation
 - Database: **DynamoDB** with TTL for 24h expiry
 - API Gateway (HTTP API) → Lambda → DynamoDB
 - EventBridge for AM/PM digest jobs
@@ -37,9 +49,15 @@
 
 **Infra**
 
-- AWS S3 (static site)
+- AWS S3 (static hosting)
 - AWS CloudFront (CDN + HTTPS via ACM)
-- AWS Route 53 (custom domain, e.g., `vistaops.tech`)
+- AWS Route 53 (custom domain, e.g., `vistaops.org`)
+
+---
+
+## 📐 Architecture (MVP)
+
+At MVP, only the static hosting layer is live; backend services are planned for phase 2.
 
 ---
 
@@ -119,7 +137,12 @@ open index.html   # or use 'npx http-server' for localhost preview
 
 ## 👥 Contributors
 
-- **Owner:** Sayeed Joseph
+- **Owner:** [Sayeed Joseph](http://sayeedjoseph.com)
 - Contributions welcome once MVP API is live
 
 ---
+
+## 📜 License
+
+This project is provided for portfolio and demonstration purposes only.  
+All rights reserved © 2025 Sayeed Joseph.

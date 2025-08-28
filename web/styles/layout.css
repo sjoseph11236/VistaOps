@@ -1,0 +1,18 @@
+/* Layout system: container, grid, sections */
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 48px 0;
+}
+.muted {
+  background: var(--sage-50);
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(12, 1fr);
+}

@@ -3,9 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./public/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="./public/favicon.png" />
+    <link rel="apple-touch-icon" href="./public/apple-touch-icon.png" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <title>VistaOps</title>
   </head>
   <body>
-    <h1>VistaOps</h1>
+    <!-- Header -->
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="brand-badge">VO</div>
+          <div class="brand-name">VistaOps</div>
+        </div>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="/docs/laundry-mvp.md" target="_blank"
+            >Tech Doc</a
+          >
+          <a class="btn btn-primary" href="#get-started">Open App</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="badge"
+          >Laundry Notifications · 24-hour purge · First-name only</span
+        >
+        <h1 class="headline">
+          Dead-simple laundry tracking for shift handoffs.
+        </h1>
+        <p class="subhead">
+          VistaOps helps MHCs and charge nurses keep laundry moving across day &
+          night shifts. Create an item in seconds, get “Ready” notifications,
+          and auto-purge after 24 hours for privacy.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#get-started">Try the MVP</a>
+          <a class="btn btn-ghost" href="/docs/laundry-mvp.md" target="_blank"
+            >Read the design doc</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section muted">
+      <div class="container">
+        <div class="grid">
+          <article class="card">
+            <h3>Fast check-in</h3>
+            <p>First name + unit. Big buttons. Optimized for one-hand use.</p>
+          </article>
+          <article class="card">
+            <h3>Smart statuses</h3>
+            <p>
+              Washing → Drying → Ready → Returned. Simple and visible to on-duty
+              staff.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Privacy by default</h3>
+            <p>First name only. 24-hour TTL purge. HTTPS end-to-end.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section">
+      <div class="container">
+        <h2 style="margin: 0 0 12px 0">How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h4>Check in</h4>
+              <p>
+                MHC scans the QR or opens the app, enters first name + unit.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h4>Update status</h4>
+              <p>
+                Tap Washing / Drying / Ready / Returned. Shift change stays in
+                sync.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h4>Auto-purge</h4>
+              <p>
+                Items expire after 24 hours; lead gets a digest for any
+                stragglers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA stripe -->
+    <section class="cta" id="get-started">
+      <div class="container cta-inner">
+        <p>Ready to pilot on your unit?</p>
+        <div style="display: flex; gap: 12px; align-items: center">
+          <div class="qr">QR here</div>
+          <a class="btn btn-primary" href="#">Open MVP</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-line">
+        <p>© 2025 VistaOps | First-name only · 24-hour retention · HTTPS</p>
+        <p>
+          Built by
+          <a href="http://sayeedjoseph.com" target="_blank">Sayeed Joseph</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
