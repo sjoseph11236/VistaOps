@@ -1,10 +1,11 @@
 # VistaOps
 
-![Vista Ops Logo](./web/public/favicon.png)
+![Vista Ops Logo](./vistaops.png)
 
 [![AWS](https://img.shields.io/badge/Built%20on-AWS-orange?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
 [![S3](https://img.shields.io/badge/S3-Static%20Hosting-red?logo=amazons3&logoColor=white)](https://aws.amazon.com/s3/)
 [![CloudFront](https://img.shields.io/badge/CDN-CloudFront-blue?logo=amazonaws&logoColor=white)](https://aws.amazon.com/cloudfront/)
+![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey)
 
 🔗 **Live demo:** [vistaops.org](https://vistaops.org)
 
