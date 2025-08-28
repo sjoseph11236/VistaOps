@@ -1,0 +1,13 @@
+/* ===== VistaOps palette (Design Tokens) ===== */
+:root {
+  --slate-900: #2f3440;
+  --slate-800: #3b404c;
+  --sage-100: #dfe6cf;
+  --sage-50: #eef3e1;
+  --olive-600: #6f7f4d;
+  --olive-700: #5d6c3f;
+  --cream-100: #f0e8a2;
+  --text-900: #15171b;
+  --text-800: #22252b;
+  --white: #ffffff;
+}
