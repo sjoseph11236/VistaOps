@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="./public/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="./public/favicon.png" />
+    <link rel="apple-touch-icon" href="./public/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <title>VistaOps Tech Doc (MVP)</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <div class="brand">
+          <div class="brand-badge">
+            <a href="../"> VO </a>
+          </div>
+          <div class="brand-name">
+            <a href="../"> VistaOps </a>
+          </div>
+        </div>
+        <nav class="nav-actions">
+          <a class="btn btn-ghost" href="../">Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container section">
+      <h1>VistaOps — Laundry Notifications MVP (Tech Doc)</h1>
+      <p class="subhead">
+        Living design doc for the MVP. First-name only · 24-hour retention ·
+        HTTPS.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>1) Problem</h3>
+          <p>
+            MHC staff need a simple way to log and track patient laundry across
+            shift changes, with timely “ready” notifications.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>2) Users & Moments</h3>
+          <p>
+            Primary: MHCs + lead nurse. Key moments: collect → wash → dry →
+            ready → returned.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>3) MVP Scope</h3>
+          <p>
+            Check-in/out, basic statuses, 24h purge. Out: photos, SSO, full WFM,
+            room mapping.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>4) Notifications</h3>
+          <p>
+            Ready SMS (feature-flag). Shift digest to lead. Anti-spam via status
+            transitions.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>5) Data Model</h3>
+          <pre style="white-space: pre-wrap">
+LaundryItem { id, unit, firstName, status, startedAt, updatedAt, readyAt?, returnedAt? }
+ActiveRoster { unit, phone, addedAt, expiresAt }
+        </pre
+          >
+        </article>
+
+        <article class="card">
+          <h3>6) API (MVP)</h3>
+          <pre style="white-space: pre-wrap">
+POST /laundry
+PATCH /laundry/:id/status
+GET /laundry?unit=…&open=true
+        </pre
+          >
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-line">
+        <p>
+          © <span id="year"></span> VistaOps | First-name only · 24-hour
+          retention · HTTPS
+        </p>
+        <p>
+          Built by
+          <a href="http://sayeedjoseph.com" target="_blank">Sayeed Joseph</a>
+        </p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("year").textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>
