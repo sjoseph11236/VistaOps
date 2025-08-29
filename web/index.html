@@ -7,7 +7,6 @@
     <link rel="icon" type="image/png" href="./public/favicon.png" />
     <link rel="apple-touch-icon" href="./public/apple-touch-icon.png" />
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
     <title>VistaOps</title>
   </head>
   <body>
@@ -19,7 +18,7 @@
           <div class="brand-name">VistaOps</div>
         </div>
         <div class="nav-actions">
-          <a class="btn btn-ghost" href="/docs/laundry-mvp.md" target="_blank"
+          <a class="btn btn-ghost" href="./docs/index.html" target="_blank"
             >Tech Doc</a
           >
           <a class="btn btn-primary" href="#get-started">Open App</a>
@@ -126,8 +125,8 @@
     <footer>
       <div class="container footer-line">
         <p>
-          © <span id="y"></span> VistaOps | First-name only · 24-hour retention
-          · HTTPS
+          © <span id="year"></span> VistaOps | First-name only · 24-hour
+          retention · HTTPS
         </p>
         <p>
           Built by
@@ -137,7 +136,7 @@
     </footer>
 
     <script>
-      document.getElementById("y").textContent = new Date().getFullYear();
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
